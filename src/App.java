@@ -15,6 +15,13 @@ public class App {
         //Criar um objeto "Placa"
         Placa placa1 = new Placa(placaCompleta , iniciasDaPlaca);
 
+        //Checar se a placa fornecida pelo usuário é válida
+        if(placa1.checarPlacaPadronizada()){
+            System.out.println("Placa válida segundo Mercosul.");
+        } else {
+            System.out.println("A placa é inválida segundo o padão Mercosul.");
+        }
+
         //Saída da resposta do sistema
         System.out.println(placa1.checarLocalidadeDaPlaca(placaCompleta, iniciasDaPlaca));
 
